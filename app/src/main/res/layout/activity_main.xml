@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <include
-        android:id="@+id/include"
+        android:id="@+id/searchToolBar"
         layout="@layout/nav_header_main" />
+
 
     <FrameLayout
         android:id="@+id/container_root"
@@ -18,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include" />
+        app:layout_constraintTop_toBottomOf="@id/searchToolBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

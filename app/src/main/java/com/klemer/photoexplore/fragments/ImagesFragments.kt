@@ -13,10 +13,12 @@ import com.google.android.material.navigation.NavigationView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.textfield.TextInputEditText
 import com.klemer.photoexplore.BuildConfig
+import com.klemer.photoexplore.MainActivity
 import com.klemer.photoexplore.R
 import com.klemer.photoexplore.adapters.ImagesAdapter
 import com.klemer.photoexplore.databinding.ImagesFragmentsBinding
 import com.klemer.photoexplore.endpoints.PixaBayEndpoints
+import com.klemer.photoexplore.extensions.hideKeyboard
 import com.klemer.photoexplore.extensions.showToast
 import com.klemer.photoexplore.helpers.AutoGridLayout
 import com.klemer.photoexplore.interfaces.ImageClickListener
@@ -38,7 +40,6 @@ class ImagesFragments : Fragment(R.layout.images_fragments), Callback<PixaBayRes
     private lateinit var fragContext: Context
     private lateinit var binding: ImagesFragmentsBinding
     private lateinit var progressBar: ProgressBar
-    private var navView: NavigationView? = null
 
     private val observerImages = Observer<List<PixaBayImage>> {
 
@@ -85,7 +86,16 @@ class ImagesFragments : Fragment(R.layout.images_fragments), Callback<PixaBayRes
 
     @SuppressLint("RtlHardcoded")
     private fun bindNavItems() {
+        val act = requireActivity() as MainActivity
 
+        searchEditText = act.findViewById(R.id.editTextSearch)
+        buttonSearch = act.findViewById(R.id.btnSearch)
+
+        buttonSearch.setOnClickListener {
+            searchImages(searchEditText.text.toString())
+            act.hideKeyboard(it)
+            searchEditText.clearFocus()
+        }
     }
 
 

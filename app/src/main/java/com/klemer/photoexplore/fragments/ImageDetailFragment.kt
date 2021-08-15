@@ -1,11 +1,11 @@
 package com.klemer.photoexplore.fragments
 
-import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.klemer.photoexplore.R
 import com.klemer.photoexplore.databinding.ImageDetailFragmentBinding
+import com.klemer.photoexplore.enums.Default
 import com.klemer.photoexplore.models.PixaBayImage
 import com.squareup.picasso.Picasso
 
@@ -36,9 +36,11 @@ class ImageDetailFragment : Fragment(R.layout.image_detail_fragment) {
         }
 
         binding.userAvatar.apply {
+            val avatar = if (image.userAvatar.isEmpty()) Default.AVATAR.url else image.userAvatar
+
             Picasso
                 .get()
-                .load(image.userAvatar)
+                .load(avatar)
                 .into(this)
         }
 

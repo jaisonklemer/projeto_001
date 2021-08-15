@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.2740740740740741" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.321025641025641" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.2740740740740741" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.3098958333333333" />
@@ -19,10 +20,12 @@
         <entry key="app/src/main/res/layout/main_layout.xml" value="0.1578125" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/root.xml" value="0.1" />
+        <entry key="app/src/main/res/menu-v26/app_bar_menu.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/menu/app_bar_menu.xml" value="0.25" />
         <entry key="app/src/main/res/menu/main.xml" value="0.1" />
         <entry key="app/src/main/res/xml/searchable.xml" value="0.12395833333333334" />
+        <entry key="app/src/main/res/xml/text_input_selector.xml" value="0.1" />
       </map>
     </option>
   </component>
