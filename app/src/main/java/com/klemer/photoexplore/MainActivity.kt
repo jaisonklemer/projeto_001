@@ -1,6 +1,8 @@
 package com.klemer.photoexplore
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
 import androidx.appcompat.app.AppCompatActivity
 import com.klemer.photoexplore.databinding.ActivityMainBinding
 import com.klemer.photoexplore.databinding.ActivityMainBinding.*
