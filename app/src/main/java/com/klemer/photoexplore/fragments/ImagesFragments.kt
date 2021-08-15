@@ -38,7 +38,6 @@ class ImagesFragments : Fragment(R.layout.images_fragments), Callback<PixaBayRes
     private lateinit var fragContext: Context
     private lateinit var binding: ImagesFragmentsBinding
     private lateinit var progressBar: ProgressBar
-    private var navView: NavigationView? = null
 
     private val observerImages = Observer<List<PixaBayImage>> {
 
