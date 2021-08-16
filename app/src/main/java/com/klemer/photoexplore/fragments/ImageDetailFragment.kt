@@ -14,7 +14,7 @@ import com.squareup.picasso.Picasso
 
 class ImageDetailFragment : Fragment(R.layout.image_detail_fragment) {
 
-    private lateinit var binding: ImageDetailFragmentBinding
+    private lateinit var binding : ImageDetailFragmentBinding
     private lateinit var viewModel: ImageDetailViewModel
 
     companion object {
@@ -56,6 +56,10 @@ class ImageDetailFragment : Fragment(R.layout.image_detail_fragment) {
 
         binding.txtDownloadsCount.apply {
             text = image.downloadsCount
+        }
+
+        binding.txtViewsCount.apply {
+            text = image.viewsCount
         }
 
         binding.txtUserUploader.apply {

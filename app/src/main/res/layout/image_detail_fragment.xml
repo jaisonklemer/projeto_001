@@ -32,11 +32,11 @@
             <TextView
                 android:id="@+id/txtImageInformation"
                 android:layout_width="match_parent"
-                android:textStyle="bold"
-                android:textSize="22sp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/default_margin"
                 android:text="@string/image_information"
+                android:textSize="22sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -57,7 +57,8 @@
                 android:layout_height="20dp"
                 android:layout_margin="@dimen/default_margin"
                 app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/txtImageInformation" />
+                app:layout_constraintTop_toBottomOf="@+id/txtImageInformation"
+                tools:src="@drawable/ic_home" />
 
             <TextView
                 android:id="@+id/txtUserUploader"
@@ -107,6 +108,27 @@
                 app:layout_constraintStart_toEndOf="@+id/textView1"
                 app:layout_constraintTop_toBottomOf="@+id/txtUserUploader"
                 tools:text="1000x1000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:text="Views: "
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/txtViewsCount"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:text="Views:" />
+
+            <TextView
+                android:id="@+id/txtViewsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDownloadsCount"
+                tools:text="1000" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>

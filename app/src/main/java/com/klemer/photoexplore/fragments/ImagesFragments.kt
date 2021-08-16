@@ -68,13 +68,16 @@ class ImagesFragments : Fragment(R.layout.images_fragments), ImageClickListener 
 
     @SuppressLint("RtlHardcoded")
     private fun bindNavItems() {
+
         val act = requireActivity() as MainActivity
 
         searchEditText = act.findViewById(R.id.editTextSearch)
         buttonSearch = act.findViewById(R.id.btnSearch)
 
         buttonSearch.setOnClickListener {
+
             showProgress(true)
+
             viewModel.searchImages(searchEditText.text.toString())
             act.hideKeyboard(it)
             searchEditText.clearFocus()
@@ -96,10 +99,13 @@ class ImagesFragments : Fragment(R.layout.images_fragments), ImageClickListener 
         val bundle = Bundle()
 
         bundle.putSerializable("image", image)
+
         val fragment = ImageDetailFragment.newInstance()
+
         fragment.arguments = bundle
 
-        requireActivity().supportFragmentManager
+        requireActivity()
+            .supportFragmentManager
             .beginTransaction()
             .hide(this)
             .add(R.id.container_root, fragment)

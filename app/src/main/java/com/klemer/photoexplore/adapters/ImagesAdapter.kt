@@ -26,6 +26,7 @@ class ImagesAdapter(
 
     override fun onBindViewHolder(holder: ImagesAdapterViewHolder, position: Int) {
         holder.bind(images[position])
+
         holder.itemView.apply {
             setOnClickListener {
                 imageClick.onImageClick(images[position])

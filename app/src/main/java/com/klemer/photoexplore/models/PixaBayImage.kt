@@ -33,6 +33,9 @@ data class PixaBayImage(
     @SerializedName("downloads")
     val downloadsCount: String,
 
+    @SerializedName("views")
+    val viewsCount: String,
+
     @SerializedName("imageWidth")
     val imageWidth: String,
 

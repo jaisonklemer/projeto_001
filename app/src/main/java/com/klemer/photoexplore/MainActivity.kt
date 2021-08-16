@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = inflate(layoutInflater)
+
         setContentView(binding.root)
 
         if (savedInstanceState == null) {
