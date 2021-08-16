@@ -39,7 +39,6 @@ class ImageDetailFragment : Fragment(R.layout.image_detail_fragment) {
         binding.userAvatar.apply {
             val avatar = if (image.userAvatar.isEmpty()) Default.AVATAR.url else image.userAvatar
 
-            println(avatar)
             Picasso
                 .get()
                 .load(avatar)
