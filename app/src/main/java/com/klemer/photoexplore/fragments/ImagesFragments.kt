@@ -64,8 +64,6 @@ class ImagesFragments : Fragment(R.layout.images_fragments), Callback<PixaBayRes
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        println(savedInstanceState)
-
         binding = ImagesFragmentsBinding.bind(view)
 
         viewModel =
