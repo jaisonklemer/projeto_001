@@ -126,7 +126,7 @@ class ImagesFragments : Fragment(R.layout.images_fragments), Callback<PixaBayRes
 
     override fun onFailure(call: Call<PixaBayResponse>, t: Throwable) {
         showProgress(false)
-        fragContext.showToast("${t.message}", fragContext)
+        fragContext.showToast("${t.message}")
     }
 
     override fun onImageClick(image: PixaBayImage) {

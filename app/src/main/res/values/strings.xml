@@ -13,4 +13,6 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="search">Search</string>
+    <string name="dimensions">Dimensions</string>
+    <string name="image_information">Image Information</string>
 </resources>

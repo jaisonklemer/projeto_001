@@ -1,5 +1,6 @@
 package com.klemer.photoexplore.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,11 +41,12 @@ class ImagesAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView
         itemView.findViewById<ImageView>(R.id.imageItemList).apply {
             Picasso
                 .get()
+
                 .load(image.webFormatImage)
                 .into(this)
         }
 
-        if(image.userAvatar.isNotEmpty()){
+        if (image.userAvatar.isNotEmpty()) {
             itemView.findViewById<ImageView>(R.id.userAvatar).apply {
                 Picasso
                     .get()
