@@ -2,9 +2,7 @@ package com.klemer.photoexplore.endpoints
 
 import com.klemer.photoexplore.models.PixaBayResponse
 import retrofit2.Call
-import retrofit2.Response
-import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface PixaBayEndpoints {
 

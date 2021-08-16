@@ -1,6 +1,5 @@
 package com.klemer.photoexplore.adapters
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.klemer.photoexplore.R
+import com.klemer.photoexplore.enums.Default
 import com.klemer.photoexplore.interfaces.ImageClickListener
 import com.klemer.photoexplore.models.PixaBayImage
 import com.squareup.picasso.Picasso
@@ -38,6 +38,9 @@ class ImagesAdapter(
 
 class ImagesAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(image: PixaBayImage) {
+
+        val avatar = if (image.userAvatar.isEmpty()) Default.AVATAR.url else image.userAvatar
+
         itemView.findViewById<ImageView>(R.id.imageItemList).apply {
             Picasso
                 .get()
@@ -46,14 +49,13 @@ class ImagesAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView
                 .into(this)
         }
 
-        if (image.userAvatar.isNotEmpty()) {
-            itemView.findViewById<ImageView>(R.id.userAvatar).apply {
-                Picasso
-                    .get()
-                    .load(image.userAvatar)
-                    .into(this)
-            }
+        itemView.findViewById<ImageView>(R.id.userAvatar).apply {
+            Picasso
+                .get()
+                .load(avatar)
+                .into(this)
         }
+
 
 
         itemView.findViewById<TextView>(R.id.txtUserName).apply {

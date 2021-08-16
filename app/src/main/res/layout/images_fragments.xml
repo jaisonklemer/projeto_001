@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:indeterminate="true"
-        android:indeterminateTint="@color/design_default_color_primary" />
+        android:indeterminateTint="@color/design_default_color_primary"
+        android:visibility="invisible" />
 
 </FrameLayout>
